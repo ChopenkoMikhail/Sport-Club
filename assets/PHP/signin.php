@@ -19,7 +19,7 @@
         ];
         
         $_SESSION['message'] = 'Добро пожаловать!';
-        header('Location: ../../SLAIDER__reg.HTML');
+        header('Location: ../../index__reg.html');
 
     } else {
         $_SESSION['message'] = 'Не верный логин или пароль';

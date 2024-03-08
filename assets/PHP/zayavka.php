@@ -77,12 +77,12 @@
 
         if ($_SESSION['user']) {
             $_SESSION['messsage'] = 'Заявка успешно оставлена,<br>мы вам позвоним!';
-            header('Location: ../../SLAIDER__reg.HTML');
+            header('Location: ../../index__reg.html');
         } 
 
         else    {
             $_SESSION['messsage'] = 'Заявка успешно оставлена,<br> мы вам позвоним!';
-            header('Location: ../../SLAIDER.HTML');
+            header('Location: ../../index.html');
         }
     } 
 
