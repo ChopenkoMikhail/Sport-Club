@@ -1,0 +1,80 @@
+<?php
+session_start();
+if (!$_SESSION['user']) {
+    header('Location: novosti.html');
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link type="image/x-icon" href="assets/images/icons/news.png" rel="shortcut icon"> 
+    <title>Новости</title>
+</head>
+    <body>
+    
+     <header id="header" class="header header_scroll2"> 
+         <div class="container">
+                         <a class="header_logo" href="SLAIDER.HTML"></a>
+                               <div class="">
+                                   <h1 class="msg_2">
+                                        <?php 
+                                            session_start();
+                                            echo $message = $_SESSION['message'];
+                                            unset ($_SESSION['message']);
+                                        ?>
+                                   </h1>
+                               </div>
+                          <nav class="nav_2"> 
+                                <div class="nav_link_ssilka3">
+                                    <form class="box_profil">
+                                        <div class="box_fot_prof"><img src="<?= $_SESSION['user']['avatar'] ?>" alt="" id="fot_prof"></div>
+                                        <h4 class="prof_name"><?= $_SESSION['user']['full_name'] ?></h4>
+                                    </form>
+                                </div>
+                                <a class="nav_link_ssilka4" href="assets/PHP/logout.php">
+                                    <div class="nav_link_vihod">
+                                        <div class="nav_link_text">Выйти</div>
+                                    </div>
+                                </a>
+                                
+
+                          </nav>
+         </div>
+     </header>
+     
+     <section  class="section news_1">
+        <div class="container_news">
+                <h2 class="section_title_news">НОВОСТИ</h2>
+                <div class="section_block_news">
+                       <h2>Открытие!!!</h2><h3>
+                       Спорт является одним из важнейших факторов, определяющих здоровье нашего города. И в Анапском районе вопросам развития физической культуры и спорта среди подрастающего и взрослого поколения мы хотим уделить самое пристальное внимание.<br>За весну 2024 года был подготовлен к функционированию наш современный спортивный зал для занятий спортом. Открытие будет 01.07.2024г. Поэтому мы делаем скидки до 50% на целый месяц занятий!<br><br>В нашем спортивном клубе будут проводится занятия в таких направлениях:<br>  1. Боевое искусство САМБО. <br>  2. Художественная гимнастика. <br>  3. Волейбол. <br>  4.Акробатические танцы. <br><br><a href="treneri.html">Ознакомится</a> с тренерами можно на нашем сайте! <br>Записаться на занятия можно позвонив по номеру +7 (987) 32-45-678 или заполнив небольшую <a href="zapis_na_trenerovky.html">анкету</a> на нашем сайте.
+                       </h3>
+                       <div class="img_news"><img src="assets/images/news/news_1.jpg" alt=""></div>
+                       <p>01.06.2024 18:00</p>
+                </div>
+        </div>
+    </section>
+    
+    
+    <section class="section_bottom">
+        <div class="container1">  
+            <img class="img_bottom" src="assets/images/logo8.png" alt="">
+            
+           <nav class="nav_bottom"> 
+                      <a class="nav_link_vk" href="https://vk.com/club224849422" target="_blank"></a>
+                      <a class="nav_link_telegram" href="https://web.telegram.org/a/#-1002145192357" target="_blank"></a>
+                      <a class="nav_link_whatsapp" href="https://chat.whatsapp.com/Ht2UoRfDxE5BXlWCqlFERl" target="_blank"></a>
+                      <a class="nav_link_odnoklassniki" href="https://ok.ru/group/70000005477273" target="_blank"></a>
+                      <a class="nav_link_dzen" href="https://dzen.ru/profile/editor/id/65dbd9c809844609ab9fa5eb" target="_blank"></a>
+            </nav>
+            <p class="bottom_text">Данный сайт является дипломной работой студента ГБПОУ КК "Анапского Сельскохозяйственного Техникума"  группы 47ис9а Чопенко Михаила Владимировича. © 2024</p>
+        </div>
+    </section>
+     
+    </body>
+</html>
