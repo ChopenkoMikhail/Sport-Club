@@ -1,0 +1,99 @@
+<?php
+session_start();
+if (!$_SESSION['user']) {
+    header('Location: raspisanie.html');
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/CSS/Style.css">
+    <link type="image/x-icon" href="assets/images/icons/raspisanie.png" rel="shortcut icon"> 
+    <title>Расписание</title>
+</head>
+    <body>
+       
+       
+                   <header id="header" class="header header_scroll2"> 
+                      <div class="container">
+                                <a class="header_logo" href="index.html"></a>
+                               <div class="">
+                                   <h1 class="msg_2">
+                                        <?php 
+                                            session_start();
+                                            echo $message = $_SESSION['message'];
+                                            unset ($_SESSION['message']);
+                                        ?>
+                                   </h1>
+                               </div>
+                          <nav class="nav_2"> 
+                                <div class="nav_link_ssilka3">
+                                    <form class="box_profil">
+                                        <div class="box_fot_prof"><img src="<?= $_SESSION['user']['avatar'] ?>" alt="" id="fot_prof"></div>
+                                        <h4 class="prof_name"><?= $_SESSION['user']['full_name'] ?></h4>
+                                    </form>
+                                </div>
+                                <a class="nav_link_ssilka4" href="assets/PHP/logout.php">
+                                    <div class="nav_link_vihod">
+                                        <div class="nav_link_text">Выйти</div>
+                                    </div>
+                                </a>
+                                
+
+                          </nav>
+                      </div>
+                    </header>
+       
+       
+       
+       
+       
+       
+       <div class="raspisanie">
+       <div class="section_header">
+                <h3 class="section_suptitle">Будь на тренировке вовремя!</h3>
+                <h2 class="section_title">Расписание занятий</h2>
+                
+            </div> 
+        <iframe width="920" height="690" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=E462B30B1B178D7E%21241&authkey=%21AI90J-bu1y3EjJs&em=2&wdAllowInteractivity=False&Item='%D0%98%D1%8E%D0%BB%D1%8C'!A1%3AJ34&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+        
+        
+<!--            <img src="raspisanie/raspisanie.jpg" alt="">-->
+        
+       </div>
+       
+       
+       <section class="section_bottom">
+        <div class="container1">  
+            <img class="img_bottom" src="assets/images/logo8.png" alt="">
+            
+            <nav class="nav_bottom"> 
+                      <a class="nav_link_vk" href="https://vk.com/club224849422" target="_blank"></a>
+                      <a class="nav_link_telegram" href="https://web.telegram.org/a/#-1002145192357" target="_blank"></a>
+                      <a class="nav_link_whatsapp" href="https://chat.whatsapp.com/Ht2UoRfDxE5BXlWCqlFERl" target="_blank"></a>
+                      <a class="nav_link_odnoklassniki" href="https://ok.ru/group/70000005477273" target="_blank"></a>
+                      <a class="nav_link_dzen" href="https://dzen.ru/profile/editor/id/65dbd9c809844609ab9fa5eb" target="_blank"></a>
+            </nav>
+            <p class="bottom_text">Данный сайт является дипломной работой студента ГБПОУ КК "Анапского Сельскохозяйственного Техникума"  группы 47ис9а Чопенко Михаила Владимировича. © 2024</p>
+        </div>
+    </section>
+       
+       
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
